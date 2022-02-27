@@ -19,6 +19,8 @@ Route::get('/', [HomeController::class, "index"]);
 
 Route::get('/users',[AdminController::class, 'user']);
 
+Route::get('/deleteuser/{id}',[AdminController::class, 'deleteuser']);
+
 Route::get('/redirects', [HomeController::class, "redirects"]);
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
