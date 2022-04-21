@@ -11,8 +11,15 @@
     <div class="container-scroller">
 
     @include('admin.navbar')
+<div class="container">
 
     <h1>Customer Orders</h1>
+
+    <form action="{{url('/search')}}" method="get">
+        @csrf
+        <input type="text" name="search" style="color:blue;">
+        <input type="submit" value="Search" class="btn btn-success">
+    </form>
     
     <table>
         <tr align="center">
@@ -36,8 +43,8 @@
         </tr>
         @endforeach
     </table>
-    
-    </div>
+</div>    
+</div>
 
     @include('admin.adminscript')
   </body>
